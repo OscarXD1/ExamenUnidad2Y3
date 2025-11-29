@@ -75,7 +75,7 @@ def unirdfs(df1, df2):
     # Retornar el DataFrame unido
     return dfUnido
 
-
+#Agrega los datos basandose en el id del trabajador
 def agregarDatos(dfUnido, rutaCsvExtra):
     # Leer archivo extra
     dfExtra = pd.read_csv(rutaCsvExtra)
