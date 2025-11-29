@@ -12,11 +12,10 @@ a. Realizar una función que reciba como parámetro una edad mínima y una edad 
 b. Mostrar por pantalla las edades medias según el nivel de estudios. (15%)
 
 """
-
 import pandas as pd
 
 #leo el archivo para converitlo a un df y poder usarlo
-ruta= "dataset/bank-loans.csv"
+ruta= "bank-loans.csv"
 df=pd.read_csv(ruta)
 #print(df)
 
