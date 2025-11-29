@@ -1,3 +1,8 @@
+#Melendez Cruz Evelyn
+#Juarez Potenciano Joselin
+#Salazar Alvarez Oscar Gael
+#951
+
 import pandas as pd
 from mysql.connector import connect, Error
 

@@ -4,6 +4,9 @@
 #951
 
 import pandas as pd
+
+#a. 	Crear una función que retorne un DataFrame indexado de las columnas departamento, Id, con la siguiente Información
+#(Nota: Ambas columnas no deben eliminarse, deben ser índices y columnas)
 #Se crea el df inicial
 def crear():
     d = {"Departamento" : ["Ventas", "Ventas", "HR", "HR", "IT", "IT"],
@@ -36,6 +39,8 @@ def dfsExtra():
 
     return df2, dfExtra
 
+#b) Crear una función que reciba como parámetro el departamento, y retorne un dataframe con la media,
+#desviación estándar, valor mínimo, valor máximo de la edad y el salario de dicho departamento.
 #Funcion para realizar estadistica del departamento seleccionado
 def estadisticasDepto(depto, df):
     df_depto = df[df["Departamento"] == depto]
@@ -60,6 +65,11 @@ def estadisticasDepto(depto, df):
     #Se retorna el resultado
     return df_estadisticas
 
+
+#c) Suponer que existen  2 diferentes archivos csv con la información de nuestros empleados contratados por año,
+#en el mismo formato presentado en el inciso a. Crear una función que una los 2 archivos en un solo dataframe,
+#cada archivo es un parámetro de la función, guardar el resultado en un nuevo archivo csv y retornar el DataFrame resultante.
+#NOTA: Para probar debe crear los archivos csv con valores a su elección.
 #Funcion para unir dos csv
 def unirdfs(df1, df2):
     # convertir csv individuales
@@ -75,6 +85,10 @@ def unirdfs(df1, df2):
     # Retornar el DataFrame unido
     return dfUnido
 
+
+#Se cuenta con un archivo csv con la información extra de los empleados, esta información es dirección, teléfono,
+#estado civil, correo, años de experiencia. Con los datos resultantes del inciso C, se desea agregar la información
+#de este nuevo archivo. Debe recibir como parámetro la ruta del archivo y retornar el DataFrame resultante.
 #Agrega los datos basandose en el id del trabajador
 def agregarDatos(dfUnido, rutaCsvExtra):
     # Leer archivo extra
